@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.fragmentContainerView)
         binding.navDrawer.setupWithNavController(navController)
-
+        binding.bottomNavigationView.setupWithNavController(navController)
 
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, binding.drawerLayout)
