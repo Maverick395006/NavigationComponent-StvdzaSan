@@ -33,5 +33,8 @@
             app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@id/firstFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="number"
+            app:argType="integer" />
     </fragment>
 </navigation>

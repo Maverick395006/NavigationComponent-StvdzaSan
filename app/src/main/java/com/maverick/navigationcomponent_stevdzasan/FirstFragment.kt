@@ -28,7 +28,8 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tvFragmentOne.setOnClickListener{
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(22)
+            findNavController().navigate(action)
         }
 
     }

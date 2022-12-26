@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.maverick.navigationcomponent_stevdzasan.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
@@ -16,8 +17,8 @@ class SecondFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        _binding =FragmentSecondBinding.inflate(inflater,container,false)
+    ): View {
+        _binding = FragmentSecondBinding.inflate(inflater, container, false)
 
 
 
@@ -27,7 +28,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvFragmentTwo.setOnClickListener{
+        binding.tvFragmentTwo.setOnClickListener {
             findNavController().navigate(R.id.action_secondFragment_to_firstFragment)
         }
 
