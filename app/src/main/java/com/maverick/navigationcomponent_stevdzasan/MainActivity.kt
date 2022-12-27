@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                     supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.teal_200)))
                 }
             }
-
     }
 
     override fun onPause() {

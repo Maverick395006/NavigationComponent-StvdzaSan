@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.maverick.navigationcomponent_stevdzasan.databinding.FragmentFirstBinding
+import com.maverick.navigationcomponent_stevdzasan.model.User
 
 class FirstFragment : Fragment() {
 
@@ -27,8 +28,11 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        val user = User("Piyush","Radadiya")
+
         binding.tvFragmentOne.setOnClickListener{
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(22)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(user)
             findNavController().navigate(action)
         }
 

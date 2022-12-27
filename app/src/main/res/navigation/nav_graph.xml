@@ -34,7 +34,8 @@
             app:popUpTo="@id/firstFragment"
             app:popUpToInclusive="true" />
         <argument
-            android:name="number"
-            app:argType="integer" />
+            android:name="user"
+            app:argType="com.maverick.navigationcomponent_stevdzasan.model.User"
+            app:nullable="true" />
     </fragment>
 </navigation>
