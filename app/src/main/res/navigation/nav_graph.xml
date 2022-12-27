@@ -18,6 +18,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_firstFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -38,4 +41,13 @@
             app:argType="com.maverick.navigationcomponent_stevdzasan.model.User"
             app:nullable="true" />
     </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.maverick.navigationcomponent_stevdzasan.BottomSheetFragment"
+        android:label="Bottom Sheet Fragment"
+        tools:layout="@layout/fragment_bottom_sheet">
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </dialog>
 </navigation>

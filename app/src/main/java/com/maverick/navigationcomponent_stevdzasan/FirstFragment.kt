@@ -18,7 +18,7 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentFirstBinding.inflate(inflater,container,false)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
 
 
@@ -29,10 +29,15 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val user = User("Piyush","Radadiya")
+        val user = User("Piyush", "Radadiya")
 
-        binding.tvFragmentOne.setOnClickListener{
+        binding.tvFragmentOne.setOnClickListener {
             val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(user)
+            findNavController().navigate(action)
+        }
+
+        binding.btnBottomSheetFragment.setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToBottomSheetFragment()
             findNavController().navigate(action)
         }
 
